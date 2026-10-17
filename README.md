@@ -4,12 +4,12 @@ No music is included. You add your own files.
 
 ## Setup
 
-1. Install with a mod manager, or copy `SeaShanty.dll` into `BepInEx/plugins/SeaShanty/`.
-2. Start the game once. This creates `BepInEx/config/SeaShanty/` with an empty `ocean` folder and an `available_music.txt` file.
+1. Install with a mod manager, or copy `SimpleMusicReplacer.dll` into `BepInEx/plugins/SimpleMusicReplacer/`.
+2. Start the game once. This creates `BepInEx/config/SimpleMusicReplacer/` with an empty `ocean` folder and an `available_music.txt` file.
 3. Put `.ogg`, `.wav` or `.mp3` files in a folder, then restart the game.
 
 ```
-BepInEx/config/SeaShanty/
+BepInEx/config/SimpleMusicReplacer/
   ocean/        <- Sea Shanty 2 goes here: loops while you're on the ocean (including sailing)
   meadows/      <- plays in the Meadows
   blackforest/
@@ -21,9 +21,9 @@ BepInEx/config/SeaShanty/
 - **Any other folder** has to match a Valheim music name, and replaces that music. Every valid name is listed in `available_music.txt`, for example `home`, `combat`, `sailing`, `intro` and `respawn`.
 - **Several files in one folder** make a playlist. They play in alphabetical order, or shuffled if `Shuffle` is on.
 
-Modpack authors can also put folders in `BepInEx/plugins/SeaShanty/music/`.
+Modpack authors can also put folders in `BepInEx/plugins/SimpleMusicReplacer/music/`.
 
-## Config (`BepInEx/config/seachanti.seashanty.cfg`)
+## Config (`BepInEx/config/sakelig.simplemusicreplacer.cfg`)
 
 | Setting | Default | Description |
 |---|---|---|

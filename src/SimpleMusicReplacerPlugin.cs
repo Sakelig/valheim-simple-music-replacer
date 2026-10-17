@@ -9,19 +9,19 @@ using HarmonyLib;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace SeaShanty
+namespace SimpleMusicReplacer
 {
     [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
-    public class SeaShantyPlugin : BaseUnityPlugin
+    public class SimpleMusicReplacerPlugin : BaseUnityPlugin
     {
-        public const string PluginGuid = "seachanti.seashanty";
-        public const string PluginName = "SeaShanty";
+        public const string PluginGuid = "sakelig.simplemusicreplacer";
+        public const string PluginName = "SimpleMusicReplacer";
         public const string PluginVersion = "1.1.0";
 
-        private const string CustomPrefix = "seashanty_";
+        private const string CustomPrefix = "smr_";
         private static readonly string[] AudioExtensions = { ".ogg", ".wav", ".mp3" };
 
-        private static SeaShantyPlugin _instance;
+        private static SimpleMusicReplacerPlugin _instance;
 
         private ConfigEntry<float> _volume;
         private ConfigEntry<bool> _shuffle;
@@ -57,14 +57,14 @@ namespace SeaShanty
             _oceanReplacesSailing = Config.Bind("General", "OceanReplacesSailingMusic", true,
                 "While on the Ocean biome, play the 'ocean' music instead of the vanilla sailing music.");
 
-            _musicDir = Path.Combine(Paths.ConfigPath, "SeaShanty");
+            _musicDir = Path.Combine(Paths.ConfigPath, "SimpleMusicReplacer");
             Directory.CreateDirectory(Path.Combine(_musicDir, "ocean"));
 
             LoadAllMusic();
-            new Harmony(PluginGuid).PatchAll(typeof(SeaShantyPlugin));
+            new Harmony(PluginGuid).PatchAll(typeof(SimpleMusicReplacerPlugin));
         }
 
-        // Music folders: BepInEx/config/SeaShanty/<name>/ and <plugin dir>/music/<name>/
+        // Music folders: BepInEx/config/SimpleMusicReplacer/<name>/ and <plugin dir>/music/<name>/
         private void LoadAllMusic()
         {
             string[] roots = { _musicDir, Path.Combine(Path.GetDirectoryName(Info.Location), "music") };
@@ -274,7 +274,7 @@ namespace SeaShanty
         {
             var lines = new List<string>
             {
-                "Make a folder in BepInEx/config/SeaShanty/ named after a biome or a music name",
+                "Make a folder in BepInEx/config/SimpleMusicReplacer/ named after a biome or a music name",
                 "and put .ogg/.wav/.mp3 files in it. Several files = playlist.",
                 "",
                 "Biomes (custom music plays everywhere in that biome):",
