@@ -4,6 +4,6 @@
   "website_url": "https://github.com/Sakelig/valheim-simple-music-replacer",
   "description": "Custom music per biome or per game track, with playlists. Made for Sea Shanty 2 on the ocean.",
   "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.2333"
+    "denikson-BepInExPack_Valheim-5.4.2351"
   ]
 }
