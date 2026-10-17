@@ -1,5 +1,3 @@
-# SeaShanty
-
 Replace Valheim's music with your own, per biome or per game track. Made for playing Sea Shanty 2 on repeat while you're out on the ocean.
 
 No music is included. You add your own files.
